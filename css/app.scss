@@ -1,0 +1,88 @@
+// Variable overides
+$enable-gradients: true;
+$menu-line-height: 32px;
+$table-border: 2px solid #e9ebee;
+
+// Import all of Bootstrap
+@import "../bootstrap/scss/bootstrap";
+
+//@include media-breakpoint-up(sm) {
+//    
+//}
+//
+//@include media-breakpoint-up(md) {
+//    
+//}
+//
+//@include media-breakpoint-up(lg) {
+//    
+//}
+
+body {
+    background-color: transparent;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    
+    > .col,
+    > [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.student-pic-pro {
+    width: 130px;
+    height: 130px;
+}
+
+.question-pic {
+    width: 88.5px;
+    height: 88.5px;
+}
+
+.menu-container {
+    > li.list-group-item {
+        border: 0;
+        border-radius: 10px;
+        line-height: $menu-line-height;
+        margin-bottom: 5px;
+    }
+}
+
+.menu-option {
+    line-height: $menu-line-height;
+}
+
+.table {
+    thead th {
+        border: none;
+        color: #848d95;
+    }
+    
+    tr {
+        background-color: white;
+    }
+    
+    td {
+        border-top: $table-border;
+        border-bottom: $table-border;
+    }
+    
+    td:first-child {
+        border-left: $table-border;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    td:last-child {
+        border-right: $table-border;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }                
+}

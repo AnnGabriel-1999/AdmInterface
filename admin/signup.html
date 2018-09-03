@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--    Required meta tags    -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!--    Bootstrap CSS    -->
+        <link rel="stylesheet" type="text/css" href="../css/app.css">
+        
+        <!--    Font Awesome CSS    -->
+        <link rel="stylesheet" type="text/css" href="../css/fontawesome/css/all.css">
+
+        <script type="text/javascript" src="../js/angular.min.js"></script>
+
+        <script type="text/javascript" src="../js/angular_modules.js"></script>
+
+        <script type="text/javascript" src="../js/angular_controllers.js"></script>
+        
+        <title>Sign Up | Quizzen</title>
+    </head>
+    <body ng-app="theApp">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6 px-5">
+                    <form name="myForm">
+                        <h1 class="text-primary my-3">Sign Up</h1>
+                        <div class="alert alert-danger alert-dismissible fade show" ng-show="error">
+                            <text>{{error.message}}</text>
+                            <button type="button" class="close" data-ng-click="reply = null">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-beer"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="First Name" ng-model="firstname" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-beer"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Middle Name" ng-model="middlename" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-beer"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Last Name" ng-model="lastname" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="far fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" ng-model="username" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Password" ng-model="password1" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Re-type password" ng-model="password2" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="button" class="btn btn-outline-primary btn-block" value="Sign Up" ng-click="signUp()"
+                        </div>
+                        <p class="text-primary text-center"><a href="#!/home">Already have an account? Sign In</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="../js/script.js"></script>
+    </body>
+</html>

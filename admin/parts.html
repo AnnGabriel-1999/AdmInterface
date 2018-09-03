@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--    Required meta tags    -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!--    Bootstrap CSS    -->
+        <link rel="stylesheet" type="text/css" href="../css/app.css">
+        
+        <!--    Font Awesome CSS    -->
+        <link rel="stylesheet" type="text/css" href="../css/fontawesome/css/all.css">
+        
+        <title>Homepage | Quizzen</title>
+    </head>
+    <body>
+        <div class="modal fade" id="partModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add Part</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="card col-5 mx-1 my-1 float-left bg-primary">
+                                    <p class="my-4">Arrange the sequence <span class="text-right"><i class="far fa-question-circle"></i></span></p>
+                                </div>
+                                <div class="card col-5 mx-1 my-1 float-left bg-primary">
+                                    <p class="my-4">Multiple Choice <span><i class="far fa-question-circle"></i></span></p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="card col-5 mx-1 my-1 float-left bg-primary">
+                                    <p class="my-4">True or False <span><i class="far fa-question-circle"></i></span></p>
+                                </div>
+                                <div class="card col-5 mx-1 my-1 float-left bg-primary">
+                                    <p class="my-4">Guess the word <span><i class="far fa-question-circle"></i></span></p>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom">
+            <a class="navbar-brand" href="home.html">
+                <img src="images/shape.png" width="30" height="30" class="d-inline-block align-top">
+                Quizzen
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Allen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Marianne</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Chris</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="container-fluid" style="margin-top: 80px;">
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-right">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#partModal">Add Part <span class="badge badge-light">1/4</span></button>
+                        <button type="button" class="btn btn-primary">View Answers</button>
+                    </p>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle col-12" type="button" id="partsSelector" data-toggle="dropdown">All Parts</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">All Parts</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Part 1</a>
+                            <a class="dropdown-item" href="#">Part 2</a>
+                            <a class="dropdown-item" href="#">Part 3</a>
+                            <a class="dropdown-item" href="#">Part 4</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card my-2">
+                                <div class="card-body">
+                                    <div class="col-8 float-left">
+                                        <h5 class="card-title">What's your ulam pare?</h5>
+                                    </div>
+                                    <div class="col-4 float-left text-right">
+                                        <img class="img-fluid rounded question-pic" src="images/chris.jpg">
+                                    </div>
+                                    
+                                    <ul class="col-12 mt-2 float-left">
+                                        <li class="list-group-item">Allen</li>
+                                        <li class="list-group-item">Ronquillo</li>
+                                        <li class="list-group-item">Villanueva</li>
+                                        <li class="list-group-item">ARV208</li>
+                                    </ul>
+                                </div>                                
+                            </div>
+                            <div class="card my-2">
+                                <div class="card-body">
+                                    <div class="col-8 float-left">
+                                        <h5 class="card-title">Overload</h5>
+                                    </div>
+                                    <div class="col-4 float-left">
+                                        <img class="img-fluid rounded question-pic question-pic" src="images/cat.jpg">
+                                    </div>
+                                </div>                                
+                            </div>
+                            <div class="card my-2">
+                                <div class="card-body">
+                                    <div class="col-8 float-left">
+                                        <h5 class="card-title">TJN Pasalubong Custard Cake</h5>
+                                    </div>
+                                    <div class="col-4 float-left">
+                                        <img class="img-fluid rounded question-pic" src="images/marianne.jpg">
+                                    </div>
+                                </div>                                
+                            </div>
+                            <div class="card my-2">
+                                <div class="card-body">
+                                    <div class="col-8 float-left">
+                                        <h5 class="card-title">Fita</h5>
+                                    </div>
+                                    <div class="col-4 float-left">
+                                        <img class="img-fluid rounded question-pic" src="images/chris.jpg">
+                                    </div>
+                                </div>                                
+                            </div>
+                            <div class="card my-2">
+                                <div class="card-body">
+                                    <div class="col-8 float-left">
+                                        <h5 class="card-title">Sky Flakes</h5>
+                                    </div>
+                                    <div class="col-4 float-left">
+                                        <img class="img-fluid rounded question-pic" src="images/marianne.jpg">
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="../js/script.js"></script>
+    </body>
+</html>

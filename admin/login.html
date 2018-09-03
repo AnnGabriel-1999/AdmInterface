@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--    Required meta tags    -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!--    Bootstrap CSS    -->
+        <link rel="stylesheet" type="text/css" href="../css/app.css">
+        
+        <!--    Font Awesome CSS    -->
+        <link rel="stylesheet" type="text/css" href="../css/fontawesome/css/all.css">
+
+        <script type="text/javascript" src="../js/angular.min.js"></script>
+
+        <script type="text/javascript" src="../js/angular_modules.js"></script>
+
+        <script type="text/javascript" src="../js/angular_controllers.js"></script>
+
+        <script type="text/javascript" src="../js/angular-my-services.js"></script>
+        
+        <title>Sign In | Quizzen</title>
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6 px-5">
+                    <form name="myForm">
+                        <h1 class="text-primary my-3">Sign In</h1>
+                        <div class="alert alert-danger alert-dismissible fade show" ng-show="error">
+                            <text>{{error.error}}</text>
+                            <button type="button" class="close" data-ng-click="reply = null">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="far fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" ng-model="angUsername" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Password" ng-model="angPassword" required>
+                        </div>
+                        <div class="form-group">
+                                <input type="button" class="btn btn-outline-primary btn-block" value="Sign In" ng-click="logIn()" ng-disabled="myForm.$invalid">
+                            
+                        </div>
+                        <p class="text-center">Forgot your password?</p>
+                        <p class="text-primary text-center"><a href="#!/signup">Don't have an account? Sign Up</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="../js/script.js"></script>
+    </body>
+</html>

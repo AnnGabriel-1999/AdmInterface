@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--    Required meta tags    -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--    Bootstrap CSS    -->
+        <link rel="stylesheet" type="text/css" href="../css/app.css">
+
+        <!--    Font Awesome CSS    -->
+        <link rel="stylesheet" type="text/css" href="../css/fontawesome/css/all.css">
+
+        <title>Homepage | Quizzen</title>
+    </head>
+    <body ng-app="theApp">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom">
+            <a class="navbar-brand" href="home.html">
+                <img src="images/shape.png" width="30" height="30" class="d-inline-block align-top">
+                Quizzen
+            </a>
+
+            <a class="btn btn-primary ml-auto mr-1" role="button" href="#!/createquiz">
+                <i class="fas fa-plus"></i> <span class="d-none d-md-inline-block">Create</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Allen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Marianne</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Chris</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-click="signOut()">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid" style="margin-top: 80px;">
+            <div class="row justify-content-center">
+                <div class="col-12 mb-2">
+                    <p class="text-center mx-1 h5">My Quizzen</p>
+                </div>
+                <div class="col-12">
+                    <div class="input-group">
+                        <input type="text" ng-model="myModel" class="form-control" placeholder="Quiz Title">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-4">
+                    <div class="col-12 text-center" ng-show="error">
+                        <h3>No quiz created.</h3>
+                        <p>
+                            <a href="#!/createquiz"> <button class="btn btn-primary">Create now</button></a>
+                        </p>
+                    </div>
+                    <div class="card mb-2" ng-repeat="info in quizInfo | filter: myModel">
+                        <div class="card-body">
+                            <div class="row justify-content-center">
+                                <div class="col-3">
+                                    <img src="images/chris.jpg" style="width: 100%; height: 100%" class="img-fluid rounded">
+                                </div>
+                                <div class="col-9">
+                                    <h5 class="card-title mb-1">{{info.quizTitle}}</h5>
+                                    <p class="text-primary">3 minutes ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right" style="background-color: white;">
+                            <a class="btn btn-info">
+                                View <i class="fas fa-beer"></i>
+                            </a>
+                            <a class="btn btn-warning" ng-href="#!/editquiz/{{info.quizID}}">
+                                Edit <i class="fas fa-edit fa-xs"></i>
+                            </a>
+                            <button type="button" class="btn btn-success">
+                                Play <i class="fas fa-play fa-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="../js/script.js"></script>
+    </body>
+</html>
